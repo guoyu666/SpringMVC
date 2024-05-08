@@ -15,4 +15,15 @@ public class FirstController {
     public String hehe(){
         return "first";
     }
+
+    @RequestMapping(value = "/heihei")
+    public String haha(){
+        return "other";
+    }
+
+    // 实现SpringMVC的首页功能
+    @RequestMapping(value = "/")
+    public String toIndex(){
+        return "index";
+    }
 }

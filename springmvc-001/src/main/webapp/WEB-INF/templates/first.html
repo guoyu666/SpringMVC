@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<!--指定 th 命名空间，让 Thymeleaf 标准表达式可以被解析和执行-->
+<!--指定th命名空间，让Thymeleaf标准表达式可以被解析和执行-->
 <!--th不是固定的，可以指定其它的命名空间，只不过大部分情况下用th-->
-<!--表示程序中出现的 th 开头的后面代码都是 Thymeleaf语法，需要被 Thymeleaf识别-->
+<!--表示程序中出现的th开头的后面代码都是Thymeleaf语法，需要被Thymeleaf识别-->
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
     <head>
         <meta charset="UTF-8">
         <title>first springmvc</title>
     </head>
     <body>
+        <!-- th: 表示后面的代码可以编写Thymeleaf语法，可以被Thymeleaf语法解析 -->
+        <!-- Thymeleaf检测到以/开始，表示绝对路径，自动会将webapp的上下文路径加上去 -->
+        <!-- 最终的效果是：href="/springmvc/heihei" -->
         <h1>我的第一个Spring MVC程序</h1>
+        <a th:href="@{/heihei}">heihei</a>
     </body>
 </html>
