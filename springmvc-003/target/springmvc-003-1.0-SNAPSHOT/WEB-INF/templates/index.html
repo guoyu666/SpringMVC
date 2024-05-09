@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+    <h1>首页</h1>
+        <a th:href="@{/user/detail}">用户详情</a><br>
+        <a th:href="@{/product/detail}">商品详情</a><br>
+    <!--测试RequestMapping注解的value属性-->
+    <a th:href="@{/testVal1}">测试RequestMapping注解的value属性1</a><br>
+    <a th:href="@{/testVal2}">测试RequestMapping注解的value属性2</a><br>
+</body>
+</html>
