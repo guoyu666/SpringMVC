@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>测试三个域对象</title>
+</head>
+<body>
+    <h1>测试三个域对象</h1>
+    <hr>
+    <h1>测试request域对象</h1>
+    <a th:href="@{/testServletAPI}">测试在SpringMVC中使用原生的Servlet API完成数据的共享！</a><br>
+    <a th:href="@{/testModel}">测试在SpringMVC中使用Model接口完成数据的共享！</a><br>
+    <a th:href="@{/testMap}">在SpringMVC当中使用Map接口完成request数据共享!!"</a><br>
+</body>
+</html>
