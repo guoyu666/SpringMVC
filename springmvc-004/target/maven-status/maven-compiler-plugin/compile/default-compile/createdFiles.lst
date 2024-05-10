@@ -1,1 +1,3 @@
+springmvc/filter/CharacterEncodingFilter.class
 springmvc/controller/UserController.class
+springmvc/pojo/User.class
