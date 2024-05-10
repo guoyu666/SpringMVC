@@ -11,5 +11,16 @@
     <!--测试RequestMapping注解的value属性-->
     <a th:href="@{/testVal1}">测试RequestMapping注解的value属性1</a><br>
     <a th:href="@{/testVal2}">测试RequestMapping注解的value属性2</a><br>
+
+    <!--发送POST请求-->
+    <form th:action="@{/user/login}" method="post">
+        用户名：<input type="text" name="username"><br>
+        密码：<input type="text" name="password"><br>
+        <input type="submit" value="登录">
+    </form>
+
+    <!--测试RequestMapping注解的params属性-->
+    <!--发送请求/testParams,并且携带参数username和password-->
+    <a th:href="@{/testParams?username=admin&password=1234}">测试RequestMapping注解的params属性</a>
 </body>
 </html>
