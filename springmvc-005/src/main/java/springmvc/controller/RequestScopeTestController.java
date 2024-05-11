@@ -4,6 +4,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.Map;
 
@@ -35,5 +36,17 @@ public class RequestScopeTestController {
         map.put("testRequestScope","在SpringMVC当中使用Map接口完成request数据共享!!");
         // 转发
         return "ok";
+    }
+
+    @RequestMapping("/testModelAndView")
+    public ModelAndView testModelAndView(){
+        // 创建“模型与视图对象”
+        ModelAndView modelAndView = new ModelAndView();
+        // 绑定数据
+        modelAndView.addObject("testRequestScope","在SpringMVC当中使用ModelAndView类完成request数据共享!!");
+        // 给“模型视图对象”绑定视图（绑定逻辑视图名称）
+        modelAndView.setViewName("ok");
+        // 返回
+        return modelAndView;
     }
 }
