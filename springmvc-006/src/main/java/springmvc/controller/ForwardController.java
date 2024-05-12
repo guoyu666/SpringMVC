@@ -14,6 +14,7 @@ public class ForwardController {
 
     @RequestMapping("/b")
     public String toB(){
-        return "forward:/a";
+        // 返回的是一个逻辑视图名称
+        return "b";
     }
 }
