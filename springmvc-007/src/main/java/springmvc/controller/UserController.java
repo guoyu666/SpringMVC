@@ -32,4 +32,10 @@ public class UserController {
         System.out.println("正在修改用户信息..." + user);
         return "ok";
     }
+
+    @RequestMapping(value = "/user/{id}", method = RequestMethod.DELETE)
+    public String del(@PathVariable("id") String id){
+        System.out.println("正在删除用户:" + id);
+        return "ok";
+    }
 }
