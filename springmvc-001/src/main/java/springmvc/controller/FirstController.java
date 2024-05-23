@@ -13,6 +13,8 @@ public class FirstController {
     // RequestMapping中代表的是请求路径
     @RequestMapping(value = "/test")
     public String hehe(){
+        System.out.println("正在处理请求...");
+        // 返回逻辑视图名称（决定跳转到哪个界面）
         return "first";
     }
 
