@@ -8,18 +8,18 @@
 <h3>用户注册</h3>
 <hr>
 <form th:action="@{/user/reg}" method="post">
-    用户名：<input type="text" username="username"><br>
-    密码：<input type="password" username="password"><br>
+    用户名：<input type="text" name="username"><br>
+    密码：<input type="password" name="password"><br>
     性别：
-        男 <input type="radio" username="sex" value="1">
-        女 <input type="radio" username="sex" value="0">
+        男 <input type="radio" name="sex" value="1">
+        女 <input type="radio" name="sex" value="0">
     <br>
     爱好：
-        抽烟 <input type="checkbox" username="interest" value="smoke">
-        喝酒 <input type="checkbox" username="interest" value="drink">
-        烫头 <input type="checkbox" username="interest" value="perm">
+        抽烟 <input type="checkbox" name="interest" value="smoke">
+        喝酒 <input type="checkbox" name="interest" value="drink">
+        烫头 <input type="checkbox" name="interest" value="perm">
     <br>
-    简介：<textarea rows="10" cols="60" username="intro"></textarea><br>
+    简介：<textarea rows="10" cols="60" name="intro"></textarea><br>
     <input type="submit" value="注册">
 </form>
 

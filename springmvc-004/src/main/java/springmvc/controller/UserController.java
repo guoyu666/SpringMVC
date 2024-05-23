@@ -4,8 +4,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import springmvc.pojo.User;
 
-import java.util.Arrays;
-
 @Controller
 public class UserController {
 
