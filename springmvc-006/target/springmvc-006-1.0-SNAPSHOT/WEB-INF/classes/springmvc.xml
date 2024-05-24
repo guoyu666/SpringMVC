@@ -36,12 +36,13 @@
     </bean>
 
     <!--配置视图控制器-->
-    <!--当你使用了这个配置，会让你整个项目中所有的注解全部失效，你需要使用下面的配置来再次开启注解 -->
+    <!--当你使用了这个配置，会让你整个项目中所有的注解全部失效，你需要使用下面的开启注解驱动"配置来再次开启注解 -->
     <mvc:view-controller path="/test" view-name="test"/>
 
     <!--开启注解驱动-->
     <mvc:annotation-driven/>
 
     <!--开启默认的Servlet处理-->
+    <!--表示的含义是：同一个请求路径，先走DispatcherServlet，如果找不到则走默认的Servlet-->
     <mvc:default-servlet-handler/>
 </beans>

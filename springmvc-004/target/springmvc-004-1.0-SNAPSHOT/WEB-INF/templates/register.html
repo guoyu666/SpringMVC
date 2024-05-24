@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+</head>
+<body>
+<h3>用户注册</h3>
+<hr>
+<form th:action="@{/user/reg}" method="post">
+    用户名：<input type="text" name="username"><br>
+    密码：<input type="password" name="password"><br>
+    性别：
+        男 <input type="radio" name="sex" value="1">
+        女 <input type="radio" name="sex" value="0">
+    <br>
+    爱好：
+        抽烟 <input type="checkbox" name="interest" value="smoke">
+        喝酒 <input type="checkbox" name="interest" value="drink">
+        烫头 <input type="checkbox" name="interest" value="perm">
+    <br>
+    简介：<textarea rows="10" cols="60" name="intro"></textarea><br>
+    <input type="submit" value="注册">
+</form>
+
+<script type="text/javascript">
+    function sendCookie(){
+        document.cookie = "id=123456789; expires=Thu, 18 Dec 2025 12:00:00 UTC; path=/";
+        document.location = "/springmvc/user/reg";
+    }
+</script>
+<button onclick="sendCookie()">向服务器端发送Cookie</button>
+</body>
+
+</html>

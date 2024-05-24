@@ -19,4 +19,15 @@
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
+    <!--添加一个过滤器,这个过滤器是springmvc提前写好了，直接用就行，这个过滤器可以帮助你将请求POST转换成PUT请求/DELETE请求-->
+    <filter>
+        <filter-name>hiddenHTTPMethodFilter</filter-name>
+        <filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>hiddenHTTPMethodFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+
 </web-app>
