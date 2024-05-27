@@ -3,12 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>首页</title>
-    <!--引入Vue-->
-    <script th:src="@{/static/js/vue.min.js}"></script>
     <!--引入axios-->
     <script th:src="@{/static/js/axios.min.js}"></script>
 </head>
 <body>
 <h1>欢迎来到首页,使用Vue3+axios+Thymeleaf+SpringMVC+MySQL发送AJAX请求</h1>
+
+<!--引入Vue-->
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<!--引入axios-->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<form th:action="@{/save}" method="post">
+    用户名：<input type="text" name="username"><br>
+    密码：<input type="password" name="password"><br>
+    <input type="submit" value="保存">
+</form>
+<div id="app">
+    <button @click="getMessage">获取消息</button>
+    <h1>{{ message }}</h1>
+</div>
+
+<script th:inline="javascript">
+    Vue.createApp({
+        data() {
+            return {
+                message: ''
+            }
+        },
+        methods: {
+            // 异步方法（ajax请求多数情况下都是异步请求）
+            async getMessage() {
+                // 发送ajax请求
+                let  response = await axios.get([[@{/}]] + 'ajax')
+                // 将返回的数据交给message
+                this.message = response.data
+            }
+        }
+    }).mount('#app')
+</script>
 </body>
 </html>
