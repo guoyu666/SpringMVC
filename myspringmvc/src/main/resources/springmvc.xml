@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<beans>
+    <!--组件扫描-->
+    <component-scan base-package="controller"/>
+
+    <!--视图解析器-->
+    <bean id="internalResourceViewResolver" class="web.servlet.view.InternalResourceViewResolver">
+        <!--设置模板文件的位置（前缀）-->
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <!--设置模板文件的后缀-->
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <!--拦截器-->
+    <interceptors>
+        <bean class="interceptor.Interceptor1"/>
+        <bean class="interceptor.Interceptor2"/>
+    </interceptors>
+</beans>
