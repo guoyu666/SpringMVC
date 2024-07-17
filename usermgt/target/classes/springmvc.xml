@@ -37,6 +37,7 @@
 
    <!--视图控制器-->
     <mvc:view-controller path="/" view-name="user_index"/>
+    <mvc:view-controller path="/toAdd" view-name="user_add"/>
 
     <!--处理静态资源，开启默认的Servlet处理-->
     <mvc:default-servlet-handler/>

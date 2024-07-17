@@ -12,7 +12,7 @@
         <init-param>
             <param-name>contextConfigLocation</param-name>
             <!--指定了Spring MVC配置文件的名字是：springmvc.xml-->
-            <!--指定了Spring MVC配置文件存放的路径是:类的根路径-->
+            <!--指定了Spring MVC配置文件存放的路径是:类的根路径（即Resources目录）-->
             <param-value>classpath:springmvc.xml</param-value>
         </init-param>
         <!--在Web服务器启动的时候，就初始化DispatcherServlet-->

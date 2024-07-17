@@ -21,7 +21,7 @@
 
     <!--测试RequestMapping注解的params属性-->
     <!--发送请求/testParams,并且携带参数username和password-->
-    <a th:href="@{/testParams?username=admin&password=1234}">测试RequestMapping注解的params属性</a>
+    <a th:href="@{/testParams(username='admin', password='1234')}">测试RequestMapping注解的params属性</a>
 
     <!--测试RequestMapping注解的headers属性-->
     <a th:href="@{/testHeaders}">测试RequestMapping注解的headers属性</a>
