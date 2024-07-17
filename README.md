@@ -1,0 +1,10 @@
+<aside>
+🎁 视频对应资料
+
+- **视频地址：**
+    
+    [springmvc教程,SpringMVC从零到精通,老杜springmvc,动力节点springmvc,spring_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1sC411L76f/?spm_id_from=333.999.0.0)
+    
+- **学习方法：**
+    - **重点注意理解SpringMVC执行流程**
+</aside>
